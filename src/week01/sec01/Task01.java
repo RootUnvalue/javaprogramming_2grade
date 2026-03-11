@@ -1,4 +1,4 @@
-package week02.sec01;
+package week01.sec01;
 /*
 Yes. I do.
  */
