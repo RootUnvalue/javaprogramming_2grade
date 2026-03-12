@@ -5,5 +5,12 @@ public class Task01 {
         final int F_INT = 123;
 
         System.out.println(F_INT);
+
+        method();
+        
+    }
+
+    final public static void method() {
+            System.out.println("This is a method.");
     }
 }
