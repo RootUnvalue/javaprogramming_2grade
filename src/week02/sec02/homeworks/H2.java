@@ -13,6 +13,12 @@ public class H2 {
         c = (float)a;
         d = (float)b;
         System.out.println(a+b > 5);
-        System.out.println(('A' == 'D') || ('C' == 'D') || ('A' == 'C'));
+
+        char A,D,C;
+        A = 'A';
+        C = 'C';
+        D = 'D';
+
+        System.out.println((A == D) && (C == D) && (A == C));
     }
 }
