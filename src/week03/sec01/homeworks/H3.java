@@ -16,17 +16,22 @@ public class H3 {
 
         System.out.println("반지름입력..! ");
         double r =  input.nextDouble();
-        System.out.println("둘레 : " + (2 * Math.PI * r));
-        System.out.println("넓이 : " + (Math.PI * r * r));
-        System.out.println("부피 : " + (4 * r * r * r * Math.PI / 3));
+        double c = 2 * Math.PI * r;
+        double s = Math.PI * r * r;
+        double v = Math.PI * r * r * r * 4 / 3;
+        System.out.println("둘레 : " + c);
+        System.out.println("넓이 : " + s);
+        System.out.println("부피 : " + v);
 
         System.out.println("밑변 입력!");
         double x = input.nextDouble();
         System.out.println("높이 입력!");
         double h = input.nextDouble();
 
-        System.out.println("삼각형의 넓이 :  " + (x*h/2));
-        System.out.println("사각형의 넓이 :  " + (x*h));
+        double triS = x * h / 2;
+        double sqrS = x * h;
+        System.out.println("삼각형의 넓이 :  " + triS);
+        System.out.println("사각형의 넓이 :  " + sqrS);
 
 
     }
