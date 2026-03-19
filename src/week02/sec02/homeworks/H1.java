@@ -14,7 +14,7 @@ public class H1 {
     }
 
     public static float getCircleV(int r){
-        return 4 * r * r * r / 3;
+        return (float) Math.PI * 4 * r * r * r / 3;
     }
 
     public static double danri(double b, double r, double m){
