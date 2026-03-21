@@ -7,10 +7,12 @@ public class H4 {
         Scanner input = new Scanner(System.in);
         System.out.println("정수를 입력...");
         int x = input.nextInt();
-
-        System.out.println("x가 증가 x: " + ++x);
-        System.out.println("x가 증가? x: " + x++);
-        System.out.println("x가 증가 x: " + x);
+        int y;
+        System.out.println("입력받은 x: " + x);
+        y = x++;
+        System.out.println("y = ++x : " + y);
+        y = ++x;
+        System.out.println("y = ++x : " + y);
 
     }
 }

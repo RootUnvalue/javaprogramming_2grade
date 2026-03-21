@@ -21,13 +21,13 @@ public class H8 {
         System.out.printf("A 메뉴의 가격: %d%nB메뉴의 가격: %d%nC메뉴의 가격: %d%nD메뉴의 가격: %d%n%n", pA, pB, pC, pD);
 
         System.out.println("원가표");
-        int mA,  mB, mC, mD;//make price per menu
-        mA = 1000;  mB = 3000; mC = 4200; mD = 1600;
+        int mA, mB, mC, mD;//make price per menu
+        mA = 1000; mB = 3000; mC = 4200; mD = 1600;
         System.out.printf("A 메뉴의 원가: %d%nB메뉴의 원가: %d%nC메뉴의 원가: %d%nD메뉴의 원가: %d%n%n", mA, mB, mC, mD);
 
         int totalSales = sA*pA + sB*pB + sC*pC + sD*pD;
-        System.out.println("총 수익: " +  totalSales);
+        System.out.println("총 수익: " + totalSales);
         int profit = totalSales - (sA*mA + sB*mB + sC*mC + sD*mD);
-        System.out.println("순익: "  + profit);
+        System.out.println("순익: " + profit);
     }
 }

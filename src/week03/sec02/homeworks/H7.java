@@ -2,6 +2,12 @@ package week03.sec02.homeworks;
 
 import java.util.Scanner;
 
+/*
+    1. 물건값, 1000~100원 투입 개수 입력받기.
+    2. 물건값 < 받은금액 일때만 반환이 이루어져야함.
+    3. 받은 금액 - 물건값 에서 액권을 차감하는 식으로 구성.
+ */
+
 public class H7 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -21,7 +27,7 @@ public class H7 {
         System.out.println("받은 돈: " + vPrice);
         vPrice = vPrice - price;
         if (vPrice < 0) {
-            System.out.println("돈이 모자름 -> 프로그램 종료");
+            System.out.println("돈이 모자름(물건값<받은 돈) -> 프로그램 종료");
             return;
         }
         else if (vPrice == 0) {

@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class H5 {
     public static void main(String[] args) {
-        //배열 써도 되나요..? 안되겠죠?
         Scanner input = new Scanner(System.in);
         int a, b, c;
         System.out.println("첫 번째 정수 입력..");
