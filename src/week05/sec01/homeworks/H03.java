@@ -17,6 +17,5 @@ public class H03 {
         if (act=='4') System.out.printf("%d / %d = %d\n",num1,num2,(num1/num2));
         if (!(act=='1'||act=='2'||act=='3'||act=='4')) System.out.println("명령 오류.");
         System.out.println("종료.");
-        }
     }
 }
