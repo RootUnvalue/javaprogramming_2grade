@@ -12,22 +12,19 @@ public class H04 {
         System.out.println("기간입력.(단위: 년)");
         double year = input.nextDouble();
 
-        while(true){
-            System.out.println("명령입력.\n단리: 1\n복리: 2");
-            char act = input.next().charAt(0);
-            if(act=='1'){
-                System.out.println("단리 계산.");
-                double simple_interest = baseMoney*ratio* year;
-                System.out.printf("원금 %.2f, 이율 %.2f%%, 기간 %.0f년인 경우\n총 단리 이자: %.2f\n",baseMoney, ratio, year, simple_interest);
-                break;
-            }
-            if(act=='2'){
-                System.out.println("복리 계산.");
-                double compound_interest = baseMoney* Math.pow((1 + ratio), year);
-                System.out.printf("원금 %.2f, 이율 %.2f%%, 기간 %.0f년인 경우\n총 복리 이자: %.2f\n", baseMoney, ratio, year, compound_interest);
-                break;
-            }
-            System.out.println("다시 입력!");
+        System.out.println("명령입력.\n단리: 1\n복리: 2");
+        char act = input.next().charAt(0);
+        if(act=='1'){
+            System.out.println("단리 계산.");
+            double simple_interest = baseMoney*ratio* year;
+            System.out.printf("원금 %.2f, 이율 %.2f%%, 기간 %.0f년인 경우\n총 단리 이자: %.2f\n",baseMoney, ratio, year, simple_interest);
         }
+        if(act=='2'){
+            System.out.println("복리 계산.");
+            double compound_interest = baseMoney* Math.pow((1 + ratio), year);
+            System.out.printf("원금 %.2f, 이율 %.2f%%, 기간 %.0f년인 경우\n총 복리 이자: %.2f\n", baseMoney, ratio, year, compound_interest);
+        }
+        if(!(act=='1'||act=='2')) System.out.println("명령 오류.");
+        System.out.println("종료.");
     }
 }
