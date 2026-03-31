@@ -28,7 +28,7 @@ public class H03 {
                 System.out.printf("%d / %d = %d\n",num1,num2,(num1/num2));
                 break;
             }
-            if (act!='1'||act!='2'||act!='3'||act!='4') System.out.println("다시 입력하세요.");
+            System.out.println("다시 입력하세요.");
         }
     }
 }

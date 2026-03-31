@@ -27,7 +27,7 @@ public class H04 {
                 System.out.printf("원금 %.2f, 이율 %.2f%%, 기간 %.0f년인 경우\n총 복리 이자: %.2f\n", baseMoney, ratio, year, compound_interest);
                 break;
             }
-            if((act != '1') & (act != '2')) System.out.println("다시 입력!");
+            System.out.println("다시 입력!");
         }
     }
 }
