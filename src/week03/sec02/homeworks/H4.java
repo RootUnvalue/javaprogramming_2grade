@@ -10,7 +10,7 @@ public class H4 {
         int y;
         System.out.println("입력받은 x: " + x);
         y = x++;
-        System.out.println("y = ++x : " + y);
+        System.out.println("y = x++ : " + y);
         y = ++x;
         System.out.println("y = ++x : " + y);
 
