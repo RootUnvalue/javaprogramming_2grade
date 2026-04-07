@@ -11,7 +11,7 @@ public class H06 {
         System.out.println("월을 입력");
         int day =  input.nextInt();
 
-        String = switch (month) {
+        String star = switch (month) {
             case 1:
         }
     }
