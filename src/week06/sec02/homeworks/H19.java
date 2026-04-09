@@ -11,8 +11,9 @@ public class H19 {
         long factorial = 1;
         while(i<=n){
             factorial = factorial * i;
+            System.out.printf(i + " * ");
             i++;
         }
-        System.out.println(n + "! = " + factorial);
+        System.out.println("\b\b= " + factorial);
     }
 }

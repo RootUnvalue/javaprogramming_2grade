@@ -10,6 +10,8 @@ public class H11 {
         int x = input.nextInt();
         System.out.println("y 입력");
         int y =  input.nextInt();
-        for(int i = x; i<=y; i++) if(i%2==0) System.out.println(i + "는 짝수입니다."); else System.out.println(i + "는 홀수입니다.");
+        int sum_odd = 0, sum_even = 0;
+        for(int i = x; i<=y; i++) if(i%2==0) sum_even += i; else sum_odd += i;
+        System.out.printf("%d 부터 %d 까지\n홀수들의 합: %d\n짝수들의 합: %d", x, y, sum_odd, sum_even);
     }
 }
