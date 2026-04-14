@@ -6,39 +6,47 @@ import java.util.Scanner;
 public class H03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-    }
-
-//    JDK-8 공부하면서 처음 Scanner 쓸때가 생각 납니다. 그땐 Scanner는 무조건 sc로 썼고 또, 프로그램 종료 전에 sc.close()를 통해서 Scanner를 종료하고 했었습니다..
-//    지금 Scanner를 선언하면서 매개변수의 이름을 input으로 둔 이유는 자바를 했던 사람이라면 sc를 모르진 않을테니까 sc를 써도 상관은 없겠읍니다마는 조금 더 직관적이라서
-//    처음 보는 사람이라도 어떤 역할을 하는지는 알지 않을까 싶어서 그런겁니다.
-//    사실 JDK-8은 진짜 오래된거기도 하고 문법적으로 지금과 비교하면 많은게 달랐지만 뭐랄까 향수?가 남는 버전이죠. LTS인건 덤이고요.
-//    단순히 try - catch 문을 사용해 끝낼수도 있다 가 취지.. 그치만? try-catch는 배운게 아니니까 ㄱ쓰면 과제의 의미가 없겠죠? finally를 통해서 무조건 한 번은 실행되게끔도 만들 수 있고요
-//    입문은 자바로 c#으로 깊게 파고 딥러닝은 파이썬으로 자료구조와 탐색, 정렬(알고리즘)은 c/c++로 프로그래밍 공부는 이렇게만 하면 되는거죠?
-//    사실 자바를 막 땔때 동적계획법을 배우고 알고리즘의 최적화도 했었는데 아직 배울게 많다고 생각해요.
-//    저는 수학을 잘 하지는 못하지만 물리는 좋아해서 물리를 하려면 수학을 해야하니 수학을 일단은 해보고는 있는데 그런게 있더라고요
-//    분명 전에 볼때는 생각나지 않았던 것들이 지금 다시 보니까 해법이 갑작스럽게 나오더라..
-//    인간의 인지능력은 계속해서 정점을 향해 가다, 노년기가 되면 서서히 퇴화를 한다고 합니다.
-//    그래서 저는 그 전까지 배움을 최대한으로 만끽하고, 그걸 토대로 노년에도 인지능력이 떨어지더라도, 수학이나 물리 문제들을 풀어보면서 추억에 잠기는 것이 저의 100년짜리 버킷리스트 중 하나입니다.
-//    잡소리는 여기까지 입니다.
-//    저는 LLM을 통한 학습에 대해 반대도, 찬성도 하지 않습니다. 그것은 개인의 선택이기 때문이죠. 그저 정답을 알고 문제의 정답을 이해하느냐 아니면 정답을 찾는 과정을 찾고 이해하느냐의 차이라고 생각합니다.
-//    물론 후자가 조금 더 좋기는 하지만요. 정말 모를때는 LLM을 통해서 그 과정을 이해하는 것도 필요한 과정이죠
-
-
-    void otherWay() {
         System.out.println("7x^2 + 4y 를 구한다");
-        System.out.println("종료를 원하면 언제든 q를 입력!");
-        Scanner input = new Scanner(System.in);
-        try {
-            do {
-                System.out.println("x: ");
-                int x = input.nextInt();
-                System.out.println("y: ");
-                int y = input.nextInt();
-                System.out.printf("x = %s, y = %s 인 경우\n", x, y);
-                System.out.println("결과는 이렇다. " + 7 * Math.pow(x, 2) + 4 * y);
-            } while (true);
-        } catch (InputMismatchException e) {
-            System.out.println("종료");
-        }
+        System.out.println("종료하려면 아무때나 q를 입력");
+        int x,y;
+        boolean loop = true;
+        do{
+            System.out.println("x:");
+            String line = input.nextLine();
+            if(line.equals("q")){
+                loop = false;
+            } else {
+                x = Integer.parseInt(line);
+                System.out.println("y:");
+                line = input.nextLine();
+                if (line.equals("q")) {
+                    loop = false;
+                } else {
+                    y = Integer.parseInt(line);
+                    System.out.printf("x = %d, y = %d\n7x^2 + 4y = %d%n", x, y, (int)(7 * Math.pow(x, 2) + 4 * y));
+                }
+            }
+        } while (loop);
+        System.out.println("종료");
+
+//        useTry_Catch();
     }
+
+//    public static void useTry_Catch() {
+//        System.out.println("7x^2 + 4y 를 구한다");
+//        System.out.println("종료를 원하면 언제든 q를 입력!");
+//        Scanner input = new Scanner(System.in);
+//        try {
+//            do {
+//                System.out.println("x: ");
+//                int x = input.nextInt();
+//                System.out.println("y: ");
+//                int y = input.nextInt();
+//                System.out.printf("x = %s, y = %s 인 경우\n", x, y);
+//                System.out.println("결과는 이렇다. " + 7 * Math.pow(x, 2) + 4 * y);
+//            } while (true);
+//        } catch (InputMismatchException e) {
+//            System.out.println("종료");
+//        }
+//    }
 }

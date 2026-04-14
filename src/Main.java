@@ -20,5 +20,12 @@ public static void main(String[] args) {
     int x = 10, y = 20;
     int z = ++x + y++;
     System.out.println(z + " and " + y);
+
+    while(true){
+        while (true){
+            break;
+        }
+        System.out.println("실행?");
+    }
 }
 }

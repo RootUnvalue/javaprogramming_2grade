@@ -6,6 +6,7 @@ public class H01 {
     public static void main(String[] args) {
         int x,y, result = 0;
         char act;
+        boolean loop = true;
         Scanner input = new Scanner(System.in);
         do {
             System.out.println("x: ");
@@ -16,18 +17,18 @@ public class H01 {
             act = input.next().charAt(0);
             if (act == '+') {
                 result = x + y;
-                break;
+                loop = false;
             } else if (act == '-') {
                 result = x - y;
-                break;
+                loop = false;
             } else if (act == '*') {
                 result = x * y;
-                break;
+                loop = false;
             } else if (act == '/') {
                 result = x / y;
-                break;
+                loop = false;
             }
-        } while ( act != 'q' );
+        } while (loop);
         System.out.printf("%d %c %d = %d", x, act, y, result);
     }
 }
