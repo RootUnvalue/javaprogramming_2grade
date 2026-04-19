@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static class lost{
@@ -13,7 +15,6 @@ public static void main(String[] args) {
     }
     String str = "yes";
     if (str == "yes") System.out.println("true");
-    short a;
 
     lost as = new lost();
 
@@ -26,6 +27,12 @@ public static void main(String[] args) {
             break;
         }
         System.out.println("실행?");
+        break;
     }
-}
+    Scanner input = new Scanner(System.in);
+    char a = input.next().charAt(0);
+    char v1 = 'A';
+    int v2 = v1;
+    input.next();
+    }
 }
