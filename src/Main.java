@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Main {
@@ -34,5 +36,13 @@ public static void main(String[] args) {
     char v1 = 'A';
     int v2 = v1;
     input.next();
+    System.out.println('c' + 'S');
+
+    char t1 = 0x1F;
+    int t2 = 012;
+    int t3 = 0b1001;
+
+    int t4 = (int) (Math.random() * (12-1+1) ) + 1;
+
     }
 }
